@@ -2,7 +2,7 @@
 title: 'PA1: Reproducible Research'
 author: "hakanh"
 date: "Saturday, February 14, 2015"
-output: word_document
+output: html_document
 ---
 
 ##1. LOADING AND PREPROCESSING THE DATA
@@ -10,7 +10,7 @@ output: word_document
 The data is read from the working directory into RStudio, and this data is called "data1".
 
 ```{r}
-setwd("C:/Users/Hakan/RepData")
+setwd("C:/Users/Svetlana")
 data1<-read.csv("reproduce.csv")
 ```
 
