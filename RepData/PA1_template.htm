@@ -1,0 +1,1012 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="PA1_template-filer/filelist.xml">
+<title>PA1: Reproducible Research</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Håkan</o:Author>
+  <o:LastAuthor>Håkan</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>1</o:TotalTime>
+  <o:Created>2015-02-14T19:45:00Z</o:Created>
+  <o:LastSaved>2015-02-14T19:45:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>546</o:Words>
+  <o:Characters>2898</o:Characters>
+  <o:Company>Hewlett-Packard</o:Company>
+  <o:Lines>24</o:Lines>
+  <o:Paragraphs>6</o:Paragraphs>
+  <o:CharactersWithSpaces>3438</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536855809 -1073711037 9 0 511 0;}
+@font-face
+	{font-family:inherit;
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h2
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h4
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+code
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+pre
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+span.identifier
+	{mso-style-name:identifier;}
+span.paren
+	{mso-style-name:paren;}
+span.string
+	{mso-style-name:string;}
+span.operator
+	{mso-style-name:operator;}
+span.number
+	{mso-style-name:number;}
+span.keyword
+	{mso-style-name:keyword;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Normal tabell";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=SV style='tab-interval:65.2pt'>
+
+<div class=Section1>
+
+<h1 style='margin-top:7.5pt;margin-right:0cm;margin-bottom:7.5pt;margin-left:
+0cm;line-height:30.0pt;background:white'><span lang=EN-GB style='font-size:
+29.0pt;font-family:inherit;mso-bidi-font-family:Helvetica;color:#333333;
+mso-ansi-language:EN-GB'>PA1: Reproducible Research<o:p></o:p></span></h1>
+
+<h4 style='margin-top:7.5pt;margin-right:0cm;margin-bottom:7.5pt;margin-left:
+0cm;line-height:15.0pt;background:white;color:inherit;text-rendering: optimizelegibility'><em><span
+lang=EN-GB style='font-size:13.0pt;font-family:inherit;mso-bidi-font-family:
+Helvetica;color:#333333;mso-ansi-language:EN-GB'>hakanh</span></em><span
+lang=EN-GB style='font-size:13.0pt;font-family:inherit;mso-bidi-font-family:
+Helvetica;color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></h4>
+
+<h4 style='margin-top:7.5pt;margin-right:0cm;margin-bottom:7.5pt;margin-left:
+0cm;line-height:15.0pt;background:white;color:inherit;text-rendering: optimizelegibility'><em><span
+lang=EN-GB style='font-size:13.0pt;font-family:inherit;mso-bidi-font-family:
+Helvetica;color:#333333;mso-ansi-language:EN-GB'>Saturday, February 14, 2015</span></em><span
+lang=EN-GB style='font-size:13.0pt;font-family:inherit;mso-bidi-font-family:
+Helvetica;color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></h4>
+
+<h2 style='margin-top:7.5pt;margin-right:0cm;margin-bottom:7.5pt;margin-left:
+0cm;line-height:30.0pt;background:white;color:inherit;text-rendering: optimizelegibility'><span
+lang=EN-GB style='font-size:23.5pt;font-family:inherit;mso-bidi-font-family:
+Helvetica;color:#333333;mso-ansi-language:EN-GB'>1. LOADING AND PREPROCESSING
+THE DATA<o:p></o:p></span></h2>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+line-height:15.0pt;background:white'><span lang=EN-GB style='font-size:10.5pt;
+font-family:Helvetica;color:#333333;mso-ansi-language:EN-GB'>The data is read
+from the working directory into RStudio, and this data is called “data1”.<o:p></o:p></span></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .75pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke'><pre style='margin-bottom:7.5pt;line-height:15.0pt;
+background:whitesmoke;word-break:break-all;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0cm;mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;
+border-top-right-radius: 4px 4px;border-bottom-right-radius: 4px 4px;
+border-bottom-left-radius: 4px 4px;word-wrap: break-word;white-space:pre-wrap;
+border-top-color:rgba(0, 0, 0, 0.148438);border-right-color:rgba(0, 0, 0, 0.148438);
+border-bottom-color:rgba(0, 0, 0, 0.148438);border-left-color:rgba(0, 0, 0, 0.148438)'><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>setwd</span></span><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span><span
+class=string><span lang=EN-GB style='font-size:9.0pt;color:#DD1144;mso-ansi-language:
+EN-GB'>&quot;C:/Users/Svetlana&quot;</span></span><span class=paren><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>)</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:whitesmoke;word-break:
+break-all;border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;
+mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>data1</span></span><span
+class=operator><span lang=EN-GB style='font-size:9.0pt;color:#687687;
+mso-ansi-language:EN-GB'>&lt;-</span></span><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>read.csv</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>(</span></span><span class=string><span lang=EN-GB style='font-size:
+9.0pt;color:#DD1144;mso-ansi-language:EN-GB'>&quot;reproduce.csv&quot;</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>)</span></span><span lang=EN-GB style='color:#333333;mso-ansi-language:
+EN-GB'><o:p></o:p></span></pre></div>
+
+<h2 style='margin-top:7.5pt;margin-right:0cm;margin-bottom:7.5pt;margin-left:
+0cm;line-height:30.0pt;background:white;color:inherit;text-rendering: optimizelegibility'><span
+lang=EN-GB style='font-size:23.5pt;font-family:inherit;mso-bidi-font-family:
+Helvetica;color:#333333;mso-ansi-language:EN-GB'>2. WHAT IS THE TOTAL NUMBER OF
+STEPS TAKEN PER DAY?<o:p></o:p></span></h2>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+line-height:15.0pt;background:white'><span lang=EN-GB style='font-size:10.5pt;
+font-family:Helvetica;color:#333333;mso-ansi-language:EN-GB'>The total number
+of steps per day is caluclated and stored in “aggsum1”. This is plotted in a
+histogam.<o:p></o:p></span></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .75pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke'><pre style='margin-bottom:7.5pt;line-height:15.0pt;
+background:whitesmoke;word-break:break-all;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0cm;mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;
+border-top-right-radius: 4px 4px;border-bottom-right-radius: 4px 4px;
+border-bottom-left-radius: 4px 4px;word-wrap: break-word;white-space:pre-wrap;
+border-top-color:rgba(0, 0, 0, 0.148438);border-right-color:rgba(0, 0, 0, 0.148438);
+border-bottom-color:rgba(0, 0, 0, 0.148438);border-left-color:rgba(0, 0, 0, 0.148438)'><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>aggsum1</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>&lt;-</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>aggregate</span></span><span class=paren><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>steps</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>~</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>date</span></span><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>data</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>=</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>data1</span></span><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>,</span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>FUN</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>=</span></span><span
+class=string><span lang=EN-GB style='font-size:9.0pt;color:#DD1144;mso-ansi-language:
+EN-GB'>&quot;sum&quot;</span></span><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>)</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:whitesmoke;word-break:
+break-all;border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;
+mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>histsum</span></span><span
+class=operator><span lang=EN-GB style='font-size:9.0pt;color:#687687;
+mso-ansi-language:EN-GB'>&lt;-</span></span><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>hist</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>(</span></span><span class=identifier><span lang=EN-GB style='font-size:
+9.0pt;color:black;mso-ansi-language:EN-GB'>aggsum1</span></span><span
+class=operator><span lang=EN-GB style='font-size:9.0pt;color:#687687;
+mso-ansi-language:EN-GB'>$</span></span><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>steps</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>breaks</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>=</span></span><span
+class=number><span lang=EN-GB style='font-size:9.0pt;color:#009999;mso-ansi-language:
+EN-GB'>10</span></span><code><span lang=EN-GB style='font-size:9.0pt;
+color:#333333;mso-ansi-language:EN-GB'>, </span></code><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>main</span></span><span
+class=operator><span lang=EN-GB style='font-size:9.0pt;color:#687687;
+mso-ansi-language:EN-GB'>=</span></span><span class=string><span lang=EN-GB
+style='font-size:9.0pt;color:#DD1144;mso-ansi-language:EN-GB'>&quot;Number of steps per day&quot;</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>)</span></span><span lang=EN-GB style='color:#333333;mso-ansi-language:
+EN-GB'><o:p></o:p></span></pre></div>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+line-height:15.0pt;background:white'><span lang=EN-GB style='font-size:10.5pt;
+font-family:Helvetica;color:#333333;mso-ansi-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+line-height:15.0pt;background:white'><span lang=EN-GB style='font-size:10.5pt;
+font-family:Helvetica;color:#333333;mso-ansi-language:EN-GB'>The mean and
+median values of steps per day are calculated. They turn out to be 10766 and
+10765.<o:p></o:p></span></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .75pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke'><pre style='margin-bottom:7.5pt;line-height:15.0pt;
+background:whitesmoke;word-break:break-all;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0cm;mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;
+border-top-right-radius: 4px 4px;border-bottom-right-radius: 4px 4px;
+border-bottom-left-radius: 4px 4px;word-wrap: break-word;white-space:pre-wrap;
+border-top-color:rgba(0, 0, 0, 0.148438);border-right-color:rgba(0, 0, 0, 0.148438);
+border-bottom-color:rgba(0, 0, 0, 0.148438);border-left-color:rgba(0, 0, 0, 0.148438)'><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>meanvalue</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>&lt;-</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>mean</span></span><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>aggsum1</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>$</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>steps</span></span><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>)</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:whitesmoke;word-break:
+break-all;border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;
+mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>cat</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>(</span></span><span class=string><span lang=EN-GB style='font-size:
+9.0pt;color:#DD1144;mso-ansi-language:EN-GB'>&quot;The mean value of steps taken per day is&quot;</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>round</span></span><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>meanvalue</span></span><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=number><span lang=EN-GB style='font-size:9.0pt;color:#009999;mso-ansi-language:
+EN-GB'>0</span></span><span class=paren><span lang=EN-GB style='font-size:9.0pt;
+color:#687687;mso-ansi-language:EN-GB'>))</span></span><span lang=EN-GB
+style='color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:white;word-break:break-all;
+border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;mso-padding-alt:
+7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;border-top-right-radius: 4px 4px;
+border-bottom-right-radius: 4px 4px;border-bottom-left-radius: 4px 4px;
+word-wrap: break-word;white-space:pre-wrap;border-top-color:rgba(0, 0, 0, 0.148438);
+border-right-color:rgba(0, 0, 0, 0.148438);border-bottom-color:rgba(0, 0, 0, 0.148438);
+border-left-color:rgba(0, 0, 0, 0.148438)'><code style='color:inherit;
+border-top-left-radius: 3px 3px;border-top-right-radius: 3px 3px;border-bottom-right-radius: 3px 3px;
+border-bottom-left-radius: 3px 3px;white-space:pre-wrap;border-style:initial;
+border-color:initial'><span lang=EN-GB style='font-size:9.0pt;color:#333333;
+mso-ansi-language:EN-GB'>## The mean value of steps taken per day is 10766</span></code><span
+lang=EN-GB style='color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:whitesmoke;word-break:
+break-all;border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;
+mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;
+border-top-right-radius: 4px 4px;border-bottom-right-radius: 4px 4px;
+border-bottom-left-radius: 4px 4px;word-wrap: break-word;white-space:pre-wrap;
+border-top-color:rgba(0, 0, 0, 0.148438);border-right-color:rgba(0, 0, 0, 0.148438);
+border-bottom-color:rgba(0, 0, 0, 0.148438);border-left-color:rgba(0, 0, 0, 0.148438)'><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>medianvalue</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>&lt;-</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>median</span></span><span class=paren><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>aggsum1</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>$</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>steps</span></span><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>)</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:whitesmoke;word-break:
+break-all;border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;
+mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>cat</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>(</span></span><span class=string><span lang=EN-GB style='font-size:
+9.0pt;color:#DD1144;mso-ansi-language:EN-GB'>&quot;The median value of steps taken per day is&quot;</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>round</span></span><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>medianvalue</span></span><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=number><span lang=EN-GB style='font-size:9.0pt;color:#009999;mso-ansi-language:
+EN-GB'>0</span></span><span class=paren><span lang=EN-GB style='font-size:9.0pt;
+color:#687687;mso-ansi-language:EN-GB'>))</span></span><span lang=EN-GB
+style='color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:white;word-break:break-all;
+border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;mso-padding-alt:
+7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;border-top-right-radius: 4px 4px;
+border-bottom-right-radius: 4px 4px;border-bottom-left-radius: 4px 4px;
+word-wrap: break-word;white-space:pre-wrap;border-top-color:rgba(0, 0, 0, 0.148438);
+border-right-color:rgba(0, 0, 0, 0.148438);border-bottom-color:rgba(0, 0, 0, 0.148438);
+border-left-color:rgba(0, 0, 0, 0.148438)'><code style='color:inherit;
+border-top-left-radius: 3px 3px;border-top-right-radius: 3px 3px;border-bottom-right-radius: 3px 3px;
+border-bottom-left-radius: 3px 3px;white-space:pre-wrap;border-style:initial;
+border-color:initial'><span lang=EN-GB style='font-size:9.0pt;color:#333333;
+mso-ansi-language:EN-GB'>## The median value of steps taken per day is 10765</span></code><span
+lang=EN-GB style='color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></pre></div>
+
+<h2 style='margin-top:7.5pt;margin-right:0cm;margin-bottom:7.5pt;margin-left:
+0cm;line-height:30.0pt;background:white;color:inherit;text-rendering: optimizelegibility'><span
+lang=EN-GB style='font-size:23.5pt;font-family:inherit;mso-bidi-font-family:
+Helvetica;color:#333333;mso-ansi-language:EN-GB'>3. WHAT IS THE AVERAGE DAILY
+ACTIVITY PATTERN?<o:p></o:p></span></h2>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+line-height:15.0pt;background:white'><span lang=EN-GB style='font-size:10.5pt;
+font-family:Helvetica;color:#333333;mso-ansi-language:EN-GB'>The mean values of
+steps for each interval is calulated and put in “aggint1”. (The number of steps
+for each interval is summarized for all days and divided with the number of
+days.) This is plotted in a time series plot.<o:p></o:p></span></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .75pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke'><pre style='margin-bottom:7.5pt;line-height:15.0pt;
+background:whitesmoke;word-break:break-all;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0cm;mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;
+border-top-right-radius: 4px 4px;border-bottom-right-radius: 4px 4px;
+border-bottom-left-radius: 4px 4px;word-wrap: break-word;white-space:pre-wrap;
+border-top-color:rgba(0, 0, 0, 0.148438);border-right-color:rgba(0, 0, 0, 0.148438);
+border-bottom-color:rgba(0, 0, 0, 0.148438);border-left-color:rgba(0, 0, 0, 0.148438)'><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>aggint1</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>&lt;-</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>aggregate</span></span><span class=paren><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>steps</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>~</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>interval</span></span><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>data</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>=</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>data1</span></span><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>FUN</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>=</span></span><span
+class=string><span lang=EN-GB style='font-size:9.0pt;color:#DD1144;mso-ansi-language:
+EN-GB'>&quot;mean&quot;</span></span><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>)</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:whitesmoke;word-break:
+break-all;border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;
+mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>plot</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>(</span></span><span class=identifier><span lang=EN-GB style='font-size:
+9.0pt;color:black;mso-ansi-language:EN-GB'>aggint1</span></span><span
+class=operator><span lang=EN-GB style='font-size:9.0pt;color:#687687;
+mso-ansi-language:EN-GB'>$</span></span><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>interval</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>aggint1</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>$</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>steps</span></span><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>type</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>=</span></span><span
+class=string><span lang=EN-GB style='font-size:9.0pt;color:#DD1144;mso-ansi-language:
+EN-GB'>&quot;l&quot;</span></span><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>)</span></span><span
+lang=EN-GB style='color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></pre></div>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+line-height:15.0pt;background:white'><span lang=EN-GB style='font-size:10.5pt;
+font-family:Helvetica;color:#333333;mso-ansi-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+line-height:15.0pt;background:white'><span lang=EN-GB style='font-size:10.5pt;
+font-family:Helvetica;color:#333333;mso-ansi-language:EN-GB'>The interval with
+the highest number of steps is found by sorting “aggint1” on mean value of
+steps and checking the interval number on the top line. It turns out to be the
+interval at 8.35.<o:p></o:p></span></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .75pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke'><pre style='margin-bottom:7.5pt;line-height:15.0pt;
+background:whitesmoke;word-break:break-all;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0cm;mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;
+border-top-right-radius: 4px 4px;border-bottom-right-radius: 4px 4px;
+border-bottom-left-radius: 4px 4px;word-wrap: break-word;white-space:pre-wrap;
+border-top-color:rgba(0, 0, 0, 0.148438);border-right-color:rgba(0, 0, 0, 0.148438);
+border-bottom-color:rgba(0, 0, 0, 0.148438);border-left-color:rgba(0, 0, 0, 0.148438)'><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>maxsteps</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>&lt;-</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>aggint1</span></span><span class=paren><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>[</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>order</span></span><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span><span
+class=operator><span lang=EN-GB style='font-size:9.0pt;color:#687687;
+mso-ansi-language:EN-GB'>-</span></span><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>aggint1</span></span><span
+class=operator><span lang=EN-GB style='font-size:9.0pt;color:#687687;
+mso-ansi-language:EN-GB'>$</span></span><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>steps</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>)</span></span><code><span lang=EN-GB style='font-size:9.0pt;color:#333333;
+mso-ansi-language:EN-GB'>,</span></code><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>]</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:whitesmoke;word-break:
+break-all;border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;
+mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>cat</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>(</span></span><span class=string><span lang=EN-GB style='font-size:
+9.0pt;color:#DD1144;mso-ansi-language:EN-GB'>&quot;The maximum number of steps in taken in the interval&quot;</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>maxsteps</span></span><span class=paren><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>[</span></span><span
+class=number><span lang=EN-GB style='font-size:9.0pt;color:#009999;mso-ansi-language:
+EN-GB'>1</span></span><code><span lang=EN-GB style='font-size:9.0pt;color:#333333;
+mso-ansi-language:EN-GB'>,</span></code><span class=number><span lang=EN-GB
+style='font-size:9.0pt;color:#009999;mso-ansi-language:EN-GB'>1</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>])</span></span><span lang=EN-GB style='color:#333333;mso-ansi-language:
+EN-GB'><o:p></o:p></span></pre><pre style='margin-bottom:7.5pt;line-height:
+15.0pt;background:white;word-break:break-all;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0cm;mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;
+border-top-right-radius: 4px 4px;border-bottom-right-radius: 4px 4px;
+border-bottom-left-radius: 4px 4px;word-wrap: break-word;white-space:pre-wrap;
+border-top-color:rgba(0, 0, 0, 0.148438);border-right-color:rgba(0, 0, 0, 0.148438);
+border-bottom-color:rgba(0, 0, 0, 0.148438);border-left-color:rgba(0, 0, 0, 0.148438)'><code
+style='color:inherit;border-top-left-radius: 3px 3px;border-top-right-radius: 3px 3px;
+border-bottom-right-radius: 3px 3px;border-bottom-left-radius: 3px 3px;
+white-space:pre-wrap;border-style:initial;border-color:initial'><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>## The maximum number of steps in taken in the interval 835</span></code><span
+lang=EN-GB style='color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></pre></div>
+
+<h2 style='margin-top:7.5pt;margin-right:0cm;margin-bottom:7.5pt;margin-left:
+0cm;line-height:30.0pt;background:white;color:inherit;text-rendering: optimizelegibility'><span
+lang=EN-GB style='font-size:23.5pt;font-family:inherit;mso-bidi-font-family:
+Helvetica;color:#333333;mso-ansi-language:EN-GB'>4. IMPUTING MISSING VALUES<o:p></o:p></span></h2>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+line-height:15.0pt;background:white'><span lang=EN-GB style='font-size:10.5pt;
+font-family:Helvetica;color:#333333;mso-ansi-language:EN-GB'>The number of line
+with NA is calculated by subtracing the the number of lines with a number equal
+to 0 or bigger from the total number of lines in “data1”. It turns out be 2304
+lines.<o:p></o:p></span></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .75pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke'><pre style='margin-bottom:7.5pt;line-height:15.0pt;
+background:whitesmoke;word-break:break-all;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0cm;mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;
+border-top-right-radius: 4px 4px;border-bottom-right-radius: 4px 4px;
+border-bottom-left-radius: 4px 4px;word-wrap: break-word;white-space:pre-wrap;
+border-top-color:rgba(0, 0, 0, 0.148438);border-right-color:rgba(0, 0, 0, 0.148438);
+border-bottom-color:rgba(0, 0, 0, 0.148438);border-left-color:rgba(0, 0, 0, 0.148438)'><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>number</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>&lt;-</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>subset</span></span><span class=paren><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>data1</span></span><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>steps</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>&gt;=</span></span><span
+class=number><span lang=EN-GB style='font-size:9.0pt;color:#009999;mso-ansi-language:
+EN-GB'>0</span></span><span class=paren><span lang=EN-GB style='font-size:9.0pt;
+color:#687687;mso-ansi-language:EN-GB'>)</span></span><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:whitesmoke;word-break:
+break-all;border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;
+mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>NAnumber</span></span><span
+class=operator><span lang=EN-GB style='font-size:9.0pt;color:#687687;
+mso-ansi-language:EN-GB'>&lt;-</span></span><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>nrow</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>(</span></span><span class=identifier><span lang=EN-GB style='font-size:
+9.0pt;color:black;mso-ansi-language:EN-GB'>data1</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>)</span></span><span class=operator><span lang=EN-GB style='font-size:
+9.0pt;color:#687687;mso-ansi-language:EN-GB'>-</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>nrow</span></span><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>number</span></span><span class=paren><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>)</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:whitesmoke;word-break:
+break-all;border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;
+mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>cat</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>(</span></span><span class=string><span lang=EN-GB style='font-size:
+9.0pt;color:#DD1144;mso-ansi-language:EN-GB'>&quot;The number of NA in the steps column is &quot;</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>NAnumber</span></span><span class=paren><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>)</span></span><span
+lang=EN-GB style='color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:white;word-break:break-all;
+border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;mso-padding-alt:
+7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;border-top-right-radius: 4px 4px;
+border-bottom-right-radius: 4px 4px;border-bottom-left-radius: 4px 4px;
+word-wrap: break-word;white-space:pre-wrap;border-top-color:rgba(0, 0, 0, 0.148438);
+border-right-color:rgba(0, 0, 0, 0.148438);border-bottom-color:rgba(0, 0, 0, 0.148438);
+border-left-color:rgba(0, 0, 0, 0.148438)'><code style='color:inherit;
+border-top-left-radius: 3px 3px;border-top-right-radius: 3px 3px;border-bottom-right-radius: 3px 3px;
+border-bottom-left-radius: 3px 3px;white-space:pre-wrap;border-style:initial;
+border-color:initial'><span lang=EN-GB style='font-size:9.0pt;color:#333333;
+mso-ansi-language:EN-GB'>## The number of NA in the steps column is<span style='mso-spacerun:yes'>  </span>2304</span></code><span
+lang=EN-GB style='color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></pre></div>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+line-height:15.0pt;background:white'><span lang=EN-GB style='font-size:10.5pt;
+font-family:Helvetica;color:#333333;mso-ansi-language:EN-GB'>The method chose
+to replace NA is to put in the value from the line above. As the value on the
+first line is NA, this value is initiated as 0. The number of replacements
+turns out to be 2304, according to the caculation above. The new dataset is
+called “data2”.<o:p></o:p></span></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .75pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke'><pre style='margin-bottom:7.5pt;line-height:15.0pt;
+background:whitesmoke;word-break:break-all;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0cm;mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;
+border-top-right-radius: 4px 4px;border-bottom-right-radius: 4px 4px;
+border-bottom-left-radius: 4px 4px;word-wrap: break-word;white-space:pre-wrap;
+border-top-color:rgba(0, 0, 0, 0.148438);border-right-color:rgba(0, 0, 0, 0.148438);
+border-bottom-color:rgba(0, 0, 0, 0.148438);border-left-color:rgba(0, 0, 0, 0.148438)'><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>data2</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>&lt;-</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>data1</span></span><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:whitesmoke;word-break:
+break-all;border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;
+mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>n</span></span><span
+class=operator><span lang=EN-GB style='font-size:9.0pt;color:#687687;
+mso-ansi-language:EN-GB'>&lt;-</span></span><span class=number><span
+lang=EN-GB style='font-size:9.0pt;color:#009999;mso-ansi-language:EN-GB'>1</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:whitesmoke;word-break:
+break-all;border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;
+mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>data2</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>[</span></span><span class=number><span lang=EN-GB style='font-size:
+9.0pt;color:#009999;mso-ansi-language:EN-GB'>1</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=number><span lang=EN-GB style='font-size:9.0pt;color:#009999;mso-ansi-language:
+EN-GB'>1</span></span><span class=paren><span lang=EN-GB style='font-size:9.0pt;
+color:#687687;mso-ansi-language:EN-GB'>]</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>&lt;-</span></span><span
+class=number><span lang=EN-GB style='font-size:9.0pt;color:#009999;mso-ansi-language:
+EN-GB'>0</span></span><code><span lang=EN-GB style='font-size:9.0pt;color:#333333;
+mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre style='margin-bottom:
+7.5pt;line-height:15.0pt;background:whitesmoke;word-break:break-all;border:
+none;mso-border-alt:solid windowtext .75pt;padding:0cm;mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><span
+class=keyword><b><span lang=EN-GB style='font-size:9.0pt;color:#990000;
+mso-ansi-language:EN-GB'>for</span></b></span><span class=paren><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>i</span></span><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'> </span></code><span
+class=keyword><b><span lang=EN-GB style='font-size:9.0pt;color:#990000;
+mso-ansi-language:EN-GB'>in</span></b></span><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'> </span></code><span
+class=number><span lang=EN-GB style='font-size:9.0pt;color:#009999;mso-ansi-language:
+EN-GB'>1</span></span><span class=operator><span lang=EN-GB style='font-size:
+9.0pt;color:#687687;mso-ansi-language:EN-GB'>:</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>nrow</span></span><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>data2</span></span><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>)){</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:whitesmoke;word-break:
+break-all;border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;
+mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>  </span></span></code><span
+class=keyword><b><span lang=EN-GB style='font-size:9.0pt;color:#990000;
+mso-ansi-language:EN-GB'>if</span></b></span><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'> </span></code><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>(</span></span><span class=identifier><span lang=EN-GB style='font-size:
+9.0pt;color:black;mso-ansi-language:EN-GB'>is.na</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>(</span></span><span class=identifier><span lang=EN-GB style='font-size:
+9.0pt;color:black;mso-ansi-language:EN-GB'>data2</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>[</span></span><span class=identifier><span lang=EN-GB style='font-size:
+9.0pt;color:black;mso-ansi-language:EN-GB'>i</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=number><span lang=EN-GB style='font-size:9.0pt;color:#009999;mso-ansi-language:
+EN-GB'>1</span></span><span class=paren><span lang=EN-GB style='font-size:9.0pt;
+color:#687687;mso-ansi-language:EN-GB'>])){</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:whitesmoke;word-break:
+break-all;border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;
+mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>    </span></span></code><span
+class=identifier><span style='font-size:9.0pt;color:black'>data2</span></span><span
+class=paren><span style='font-size:9.0pt;color:#687687'>[</span></span><span
+class=GramE><span class=identifier><span style='font-size:9.0pt;color:black'>i</span></span><code><span
+style='font-size:9.0pt;color:#333333'>,</span></code><span class=number><span
+style='font-size:9.0pt;color:#009999'>1</span></span></span><span class=paren><span
+style='font-size:9.0pt;color:#687687'>]</span></span><span class=operator><span
+style='font-size:9.0pt;color:#687687'>&lt;-</span></span><span
+class=identifier><span style='font-size:9.0pt;color:black'>data2</span></span><span
+class=paren><span style='font-size:9.0pt;color:#687687'>[</span></span><span
+class=identifier><span style='font-size:9.0pt;color:black'>i</span></span><span
+class=operator><span style='font-size:9.0pt;color:#687687'>-</span></span><span
+class=number><span style='font-size:9.0pt;color:#009999'>1</span></span><code><span
+style='font-size:9.0pt;color:#333333'>,</span></code><span class=number><span
+style='font-size:9.0pt;color:#009999'>1</span></span><span class=paren><span
+style='font-size:9.0pt;color:#687687'>]</span></span><code><span
+style='font-size:9.0pt;color:#333333'><o:p></o:p></span></code></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:whitesmoke;word-break:
+break-all;border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;
+mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>    </span></span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>n</span></span><span class=operator><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>&lt;-</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>n</span></span><span class=operator><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>+</span></span><span
+class=number><span lang=EN-GB style='font-size:9.0pt;color:#009999;mso-ansi-language:
+EN-GB'>1</span></span><code><span lang=EN-GB style='font-size:9.0pt;color:#333333;
+mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre style='margin-bottom:
+7.5pt;line-height:15.0pt;background:whitesmoke;word-break:break-all;border:
+none;mso-border-alt:solid windowtext .75pt;padding:0cm;mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>  </span></span></code><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>}</span></span><code><span lang=EN-GB style='font-size:9.0pt;color:#333333;
+mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre style='margin-bottom:
+7.5pt;line-height:15.0pt;background:whitesmoke;word-break:break-all;border:
+none;mso-border-alt:solid windowtext .75pt;padding:0cm;mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>}</span></span><code><span lang=EN-GB style='font-size:9.0pt;color:#333333;
+mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre style='margin-bottom:
+7.5pt;line-height:15.0pt;background:whitesmoke;word-break:break-all;border:
+none;mso-border-alt:solid windowtext .75pt;padding:0cm;mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><span
+class=GramE><span class=identifier><span lang=EN-GB style='font-size:9.0pt;
+color:black;mso-ansi-language:EN-GB'>cat</span></span><span class=paren><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span></span><span
+class=string><span lang=EN-GB style='font-size:9.0pt;color:#DD1144;mso-ansi-language:
+EN-GB'>&quot;The number of replacement is &quot;</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'> , </span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>n</span></span><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>)</span></span><span
+lang=EN-GB style='color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:white;word-break:break-all;
+border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;mso-padding-alt:
+7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;border-top-right-radius: 4px 4px;
+border-bottom-right-radius: 4px 4px;border-bottom-left-radius: 4px 4px;
+word-wrap: break-word;white-space:pre-wrap;border-top-color:rgba(0, 0, 0, 0.148438);
+border-right-color:rgba(0, 0, 0, 0.148438);border-bottom-color:rgba(0, 0, 0, 0.148438);
+border-left-color:rgba(0, 0, 0, 0.148438)'><code style='color:inherit;
+border-top-left-radius: 3px 3px;border-top-right-radius: 3px 3px;border-bottom-right-radius: 3px 3px;
+border-bottom-left-radius: 3px 3px;white-space:pre-wrap;border-style:initial;
+border-color:initial'><span lang=EN-GB style='font-size:9.0pt;color:#333333;
+mso-ansi-language:EN-GB'>## The number of replacement <span class=GramE>is<span style='mso-spacerun:yes'>  </span>2304</span></span></code><span
+lang=EN-GB style='color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></pre></div>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+line-height:15.0pt;background:white'><span lang=EN-GB style='font-size:10.5pt;
+font-family:Helvetica;color:#333333;mso-ansi-language:EN-GB'>The histogram is
+drawn again, this time for the dataset with the NA replaced, and mean and
+average of steps is calculated again. It is obvious that the method I chose
+resulted in a higher number of days with no steps taken. It looks as if there
+are ten days with only NA <span class=GramE>that are</span> not days with no
+steps.<o:p></o:p></span></p>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+line-height:15.0pt;background:white'><span lang=EN-GB style='font-size:10.5pt;
+font-family:Helvetica;color:#333333;mso-ansi-language:EN-GB'>This does have an
+effect on the mean values that goes down to 9354 from 10766. The median is of
+course not that sensitive and is only reduced to 10395 from 10765.<o:p></o:p></span></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .75pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke'><pre style='margin-bottom:7.5pt;line-height:15.0pt;
+background:whitesmoke;word-break:break-all;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0cm;mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;
+border-top-right-radius: 4px 4px;border-bottom-right-radius: 4px 4px;
+border-bottom-left-radius: 4px 4px;word-wrap: break-word;white-space:pre-wrap;
+border-top-color:rgba(0, 0, 0, 0.148438);border-right-color:rgba(0, 0, 0, 0.148438);
+border-bottom-color:rgba(0, 0, 0, 0.148438);border-left-color:rgba(0, 0, 0, 0.148438)'><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>aggsum2</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>&lt;-</span></span><span
+class=GramE><span class=identifier><span lang=EN-GB style='font-size:9.0pt;
+color:black;mso-ansi-language:EN-GB'>aggregate</span></span><span class=paren><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span></span><span
+class=SpellE><span class=identifier><span lang=EN-GB style='font-size:9.0pt;
+color:black;mso-ansi-language:EN-GB'>steps</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>~</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>date</span></span></span><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>data</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>=</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>data2</span></span><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>,</span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>FUN</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>=</span></span><span
+class=string><span lang=EN-GB style='font-size:9.0pt;color:#DD1144;mso-ansi-language:
+EN-GB'>&quot;sum&quot;</span></span><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>)</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:whitesmoke;word-break:
+break-all;border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;
+mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><span class=SpellE><span class=GramE><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>histsum</span></span></span></span><span
+class=operator><span lang=EN-GB style='font-size:9.0pt;color:#687687;
+mso-ansi-language:EN-GB'>&lt;-</span></span><span class=SpellE><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>hist</span></span></span><span class=paren><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>aggsum2</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>$</span></span><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>steps</span></span><code><span lang=EN-GB
+style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>breaks</span></span><span class=operator><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>=</span></span><span
+class=number><span lang=EN-GB style='font-size:9.0pt;color:#009999;mso-ansi-language:
+EN-GB'>10</span></span><code><span lang=EN-GB style='font-size:9.0pt;
+color:#333333;mso-ansi-language:EN-GB'>, </span></code><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>main</span></span><span
+class=operator><span lang=EN-GB style='font-size:9.0pt;color:#687687;
+mso-ansi-language:EN-GB'>=</span></span><span class=string><span lang=EN-GB
+style='font-size:9.0pt;color:#DD1144;mso-ansi-language:EN-GB'>&quot;Number of steps per day&quot;</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>)</span></span><span lang=EN-GB style='color:#333333;mso-ansi-language:
+EN-GB'><o:p></o:p></span></pre></div>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+line-height:15.0pt;background:white'><span lang=EN-GB style='font-size:10.5pt;
+font-family:Helvetica;color:#333333;mso-ansi-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .75pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke'><pre style='margin-bottom:7.5pt;line-height:15.0pt;
+background:whitesmoke;word-break:break-all;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0cm;mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;
+border-top-right-radius: 4px 4px;border-bottom-right-radius: 4px 4px;
+border-bottom-left-radius: 4px 4px;word-wrap: break-word;white-space:pre-wrap;
+border-top-color:rgba(0, 0, 0, 0.148438);border-right-color:rgba(0, 0, 0, 0.148438);
+border-bottom-color:rgba(0, 0, 0, 0.148438);border-left-color:rgba(0, 0, 0, 0.148438)'><span
+class=SpellE><span class=GramE><span class=identifier><span lang=EN-GB
+style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>meanvalue</span></span></span></span><span
+class=operator><span lang=EN-GB style='font-size:9.0pt;color:#687687;
+mso-ansi-language:EN-GB'>&lt;-</span></span><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>mean</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>(</span></span><span class=identifier><span lang=EN-GB style='font-size:
+9.0pt;color:black;mso-ansi-language:EN-GB'>aggsum2</span></span><span
+class=operator><span lang=EN-GB style='font-size:9.0pt;color:#687687;
+mso-ansi-language:EN-GB'>$</span></span><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>steps</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>)</span></span><code><span lang=EN-GB style='font-size:9.0pt;color:#333333;
+mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre style='margin-bottom:
+7.5pt;line-height:15.0pt;background:whitesmoke;word-break:break-all;border:
+none;mso-border-alt:solid windowtext .75pt;padding:0cm;mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><span
+class=GramE><span class=identifier><span lang=EN-GB style='font-size:9.0pt;
+color:black;mso-ansi-language:EN-GB'>cat</span></span><span class=paren><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span></span><span
+class=string><span lang=EN-GB style='font-size:9.0pt;color:#DD1144;mso-ansi-language:
+EN-GB'>&quot;The mean value of steps taken per day is&quot;</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>round</span></span><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span><span
+class=SpellE><span class=identifier><span lang=EN-GB style='font-size:9.0pt;
+color:black;mso-ansi-language:EN-GB'>meanvalue</span></span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=number><span lang=EN-GB style='font-size:9.0pt;color:#009999;mso-ansi-language:
+EN-GB'>0</span></span><span class=paren><span lang=EN-GB style='font-size:9.0pt;
+color:#687687;mso-ansi-language:EN-GB'>))</span></span><span lang=EN-GB
+style='color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:white;word-break:break-all;
+border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;mso-padding-alt:
+7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;border-top-right-radius: 4px 4px;
+border-bottom-right-radius: 4px 4px;border-bottom-left-radius: 4px 4px;
+word-wrap: break-word;white-space:pre-wrap;border-top-color:rgba(0, 0, 0, 0.148438);
+border-right-color:rgba(0, 0, 0, 0.148438);border-bottom-color:rgba(0, 0, 0, 0.148438);
+border-left-color:rgba(0, 0, 0, 0.148438)'><code style='color:inherit;
+border-top-left-radius: 3px 3px;border-top-right-radius: 3px 3px;border-bottom-right-radius: 3px 3px;
+border-bottom-left-radius: 3px 3px;white-space:pre-wrap;border-style:initial;
+border-color:initial'><span lang=EN-GB style='font-size:9.0pt;color:#333333;
+mso-ansi-language:EN-GB'>## The mean value of steps taken per day is 9354</span></code><span
+lang=EN-GB style='color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:whitesmoke;word-break:
+break-all;border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;
+mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;
+border-top-right-radius: 4px 4px;border-bottom-right-radius: 4px 4px;
+border-bottom-left-radius: 4px 4px;word-wrap: break-word;white-space:pre-wrap;
+border-top-color:rgba(0, 0, 0, 0.148438);border-right-color:rgba(0, 0, 0, 0.148438);
+border-bottom-color:rgba(0, 0, 0, 0.148438);border-left-color:rgba(0, 0, 0, 0.148438)'><span
+class=SpellE><span class=GramE><span class=identifier><span lang=EN-GB
+style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>medianvalue</span></span></span></span><span
+class=operator><span lang=EN-GB style='font-size:9.0pt;color:#687687;
+mso-ansi-language:EN-GB'>&lt;-</span></span><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>median</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>(</span></span><span class=identifier><span lang=EN-GB style='font-size:
+9.0pt;color:black;mso-ansi-language:EN-GB'>aggsum2</span></span><span
+class=operator><span lang=EN-GB style='font-size:9.0pt;color:#687687;
+mso-ansi-language:EN-GB'>$</span></span><span class=identifier><span
+lang=EN-GB style='font-size:9.0pt;color:black;mso-ansi-language:EN-GB'>steps</span></span><span
+class=paren><span lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:
+EN-GB'>)</span></span><code><span lang=EN-GB style='font-size:9.0pt;color:#333333;
+mso-ansi-language:EN-GB'><o:p></o:p></span></code></pre><pre style='margin-bottom:
+7.5pt;line-height:15.0pt;background:whitesmoke;word-break:break-all;border:
+none;mso-border-alt:solid windowtext .75pt;padding:0cm;mso-padding-alt:7.0pt 7.0pt 7.0pt 7.0pt'><span
+class=GramE><span class=identifier><span lang=EN-GB style='font-size:9.0pt;
+color:black;mso-ansi-language:EN-GB'>cat</span></span><span class=paren><span
+lang=EN-GB style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span></span><span
+class=string><span lang=EN-GB style='font-size:9.0pt;color:#DD1144;mso-ansi-language:
+EN-GB'>&quot;The median value of steps taken per day is&quot;</span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=identifier><span lang=EN-GB style='font-size:9.0pt;color:black;
+mso-ansi-language:EN-GB'>round</span></span><span class=paren><span lang=EN-GB
+style='font-size:9.0pt;color:#687687;mso-ansi-language:EN-GB'>(</span></span><span
+class=SpellE><span class=identifier><span lang=EN-GB style='font-size:9.0pt;
+color:black;mso-ansi-language:EN-GB'>medianvalue</span></span></span><code><span
+lang=EN-GB style='font-size:9.0pt;color:#333333;mso-ansi-language:EN-GB'>, </span></code><span
+class=number><span lang=EN-GB style='font-size:9.0pt;color:#009999;mso-ansi-language:
+EN-GB'>0</span></span><span class=paren><span lang=EN-GB style='font-size:9.0pt;
+color:#687687;mso-ansi-language:EN-GB'>))</span></span><span lang=EN-GB
+style='color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></pre><pre
+style='margin-bottom:7.5pt;line-height:15.0pt;background:white;word-break:break-all;
+border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;mso-padding-alt:
+7.0pt 7.0pt 7.0pt 7.0pt;border-top-left-radius: 4px 4px;border-top-right-radius: 4px 4px;
+border-bottom-right-radius: 4px 4px;border-bottom-left-radius: 4px 4px;
+word-wrap: break-word;white-space:pre-wrap;border-top-color:rgba(0, 0, 0, 0.148438);
+border-right-color:rgba(0, 0, 0, 0.148438);border-bottom-color:rgba(0, 0, 0, 0.148438);
+border-left-color:rgba(0, 0, 0, 0.148438)'><code style='color:inherit;
+border-top-left-radius: 3px 3px;border-top-right-radius: 3px 3px;border-bottom-right-radius: 3px 3px;
+border-bottom-left-radius: 3px 3px;white-space:pre-wrap;border-style:initial;
+border-color:initial'><span lang=EN-GB style='font-size:9.0pt;color:#333333;
+mso-ansi-language:EN-GB'>## The median value of steps taken per day is 10395</span></code><span
+lang=EN-GB style='color:#333333;mso-ansi-language:EN-GB'><o:p></o:p></span></pre></div>
+
+<p class=MsoNormal><span lang=EN-GB style='mso-ansi-language:EN-GB'><o:p>&nbsp;</o:p></span></p>
+
+</span></div>
+
+</body>
+
+</html>
+
